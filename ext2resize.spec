@@ -28,7 +28,6 @@ Narzêdzie do zmiany wielko¶ci systemu plików ext2.
 aclocal
 autoconf
 automake
-LDFLAGS="-s"; export LDFLAGS
 %configure
 %{__make}
 
@@ -38,8 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf THANKS doc/HOWTO README \
-	$RPM_BUILD_ROOT%{_mandir}/man?/*
+gzip -9nf THANKS doc/HOWTO README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
