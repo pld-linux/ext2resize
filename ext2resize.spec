@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/System
 Vendor:		Lennert Buytenhek <buytenh@gnu.org>
 Source0:	http://dl.sourceforge.net/ext2resize/%{name}-%{version}.tar.bz2
+# Source0-md5:	439bf19d6520194ca42b942f5b7a0703
 Patch0:		%{name}-automake.patch
 URL:		http://ext2resize.sourceforge.net/
 BuildRequires:	automake
