@@ -1,40 +1,51 @@
-Summary:	an ext2 filesystem resizer
-Summary(pl):	narzêdzie do zmiany wielko¶ci systemu plików ext2
+Summary:	An ext2 filesystem resizer
+Summary(pl):	Narzêdzie do zmiany wielko¶ci systemu plików ext2
 Name:		ext2resize
-Version:	1.0.3
+Version:	1.1.14
 Release:	1
+License:	GPL
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
-Copyright:	GPL
-Source: 	http://www.dsv.nl/~buytenh/ext2resize/%{name}-%{version}.tar.bz2
-URL:		http://www.dsv.nl/~buytenh/ext2resize/
-Vendor:		Lennert Buytenhek <buytenh@dsv.nl>
+Vendor:		Lennert Buytenhek <buytenh@gnu.org>
+Source0:	http://download.sourceforge.net/ext2resize/%{name}-%{version}.tar.gz
+Patch0:		ext2resize-automake.patch
+URL:		http://ext2resize.sourceforge.net/
+BuildRequires:	automake
+BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-an ext2 filesystem resizer
+An ext2 filesystem resizer.
 
 %description -l pl
-narzêdzie do zmiany wielko¶ci systemu plików ext2
+Narzêdzie do zmiany wielko¶ci systemu plików ext2.
 
 %prep
-%setup -q -n %{name}-1.0
+%setup -q
+%patch0 -p1
 
 %build
+aclocal
+autoconf
+automake
+LDFLAGS="-s"; export LDFLAGS
 %configure
-make CFLAGS="$RPM_OPT_FLAGS -Wall"
+make
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d			$RPM_BUILD_ROOT%{_sbindir}
-install -s src/ext2resize	$RPM_BUILD_ROOT%{_sbindir}
-gzip -9nf THANKS doc/HOWTO
+make install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+gzip -9nf THANKS doc/HOWTO README \
+	$RPM_BUILD_ROOT%{_mandir}/man?/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {THANKS,doc/HOWTO}.gz
-%attr(755, root,     root)	%{_sbindir}/*
+%doc {*,doc/*}.gz
+%attr(755,root,root) %{_sbindir}/*
+%{_mandir}/man?/*
