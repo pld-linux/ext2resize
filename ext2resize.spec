@@ -25,7 +25,7 @@ Narzêdzie do zmiany wielko¶ci systemu plików ext2.
 
 %build
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
