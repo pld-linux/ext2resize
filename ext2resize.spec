@@ -1,14 +1,14 @@
 Summary:	An ext2 filesystem resizer
 Summary(pl):	Narzêdzie do zmiany wielko¶ci systemu plików ext2
 Name:		ext2resize
-Version:	1.1.14
-Release:	2
+Version:	1.1.17
+Release:	1
 License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
 Vendor:		Lennert Buytenhek <buytenh@gnu.org>
-Source0:	ftp://download.sourceforge.net/pub/sourceforge/ext2resize/%{name}-%{version}.tar.gz
+Source0:	http://prdownloads.sourceforge.net/ext2resize/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-automake.patch
 URL:		http://ext2resize.sourceforge.net/
 BuildRequires:	automake
