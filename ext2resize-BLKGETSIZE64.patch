@@ -5,7 +5,7 @@
  
  #ifndef BLKGETSIZE64
 -#define BLKGETSIZE64 _IOR(0x12,114,sizeof(unsigned long long))
-+#define BLKGETSIZE64 _IOR(0x12,114,unsigned long long)
++#define BLKGETSIZE64 _IOR(0x12,114,size_t /* unsigned long long */)
  #endif
  
  struct my_cookie
