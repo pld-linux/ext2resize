@@ -6,7 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/System
 Vendor:		Lennert Buytenhek <buytenh@gnu.org>
-Source0:	http://prdownloads.sourceforge.net/ext2resize/%{name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/ext2resize/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-automake.patch
 URL:		http://ext2resize.sourceforge.net/
 BuildRequires:	automake
