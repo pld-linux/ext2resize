@@ -1,27 +1,10 @@
-diff -Nru ext2resize-1.1.14/src/Makefile.am ext2resize-1.1.14.new/src/Makefile.am
---- ext2resize-1.1.14/src/Makefile.am	Mon Apr 17 16:46:56 2000
-+++ ext2resize-1.1.14.new/src/Makefile.am	Mon Apr 17 16:47:10 2000
-@@ -2,7 +2,7 @@
- ## $Id$
- 
- sbin_PROGRAMS = ext2resize ext2prepare ext2online
--noinst_PROGRAMS = tst
-+#noinst_PROGRAMS = tst
- 
- noinst_LIBRARIES = libext2resize.a
- 
-@@ -28,11 +28,11 @@
- ext2online_SOURCES = ext2online.c
- ext2online_LDADD = libext2resize.a
- 
--tst_SOURCES = tst.c
--tst_LDADD = libext2resize.a /usr/lib/libuuid.a
-+#tst_SOURCES = tst.c
-+#tst_LDADD = libext2resize.a /usr/lib/libuuid.a
+diff -Nru ext2resize-1.1.17/src/Makefile.am ext2resize-1.1.17.new/src/Makefile.am
+--- ext2resize-1.1.17/src/Makefile.am	Wed Sep 27 09:25:54 2000
++++ ext2resize-1.1.17.new/src/Makefile.am	Wed Jun 27 18:40:16 2001
+@@ -25,6 +25,3 @@
  
  noinst_HEADERS = ext2.h
  
- LIBS = @LIBS@
- 
+-LIBS = @LIBS@
+-
 -CFLAGS += -Wall -g
-+#CFLAGS += -Wall -g
