@@ -8,8 +8,8 @@ Group:		Applications/System
 Vendor:		Lennert Buytenhek <buytenh@gnu.org>
 Source0:	http://dl.sourceforge.net/ext2resize/%{name}-%{version}.tar.bz2
 # Source0-md5:	e225b5c9f9d0413a63c66461557d694c
-# Source0-size:	164526
 Patch0:		%{name}-automake.patch
+Patch1:		%{name}-BLKGETSIZE64.patch
 URL:		http://ext2resize.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	autoconf
@@ -24,6 +24,7 @@ Narzêdzie do zmiany wielko¶ci systemu plików ext2.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
