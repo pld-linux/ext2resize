@@ -5,8 +5,6 @@ Version:	1.1.17
 Release:	1
 License:	GPL
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 Vendor:		Lennert Buytenhek <buytenh@gnu.org>
 Source0:	http://prdownloads.sourceforge.net/ext2resize/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-automake.patch
