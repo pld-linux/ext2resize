@@ -7,7 +7,7 @@ License:	GPL
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
 Vendor:		Lennert Buytenhek <buytenh@gnu.org>
-Source0:	http://download.sourceforge.net/ext2resize/%{name}-%{version}.tar.gz
+Source0:	ftp://download.sourceforge.net/pub/sourceforge/ext2resize/%{name}-%{version}.tar.gz
 Patch0:		ext2resize-automake.patch
 URL:		http://ext2resize.sourceforge.net/
 BuildRequires:	automake
