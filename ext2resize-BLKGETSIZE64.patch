@@ -1,0 +1,11 @@
+--- ext2resize-1.9.19/src/ext2_unix_io.c.orig	2005-02-10 15:21:02.000000000 +0100
++++ ext2resize-1.9.19/src/ext2_unix_io.c	2005-02-10 15:20:39.000000000 +0100
+@@ -47,7 +47,7 @@
+ #endif
+ 
+ #ifndef BLKGETSIZE64
+-#define BLKGETSIZE64 _IOR(0x12,114,sizeof(unsigned long long))
++#define BLKGETSIZE64 _IOR(0x12,114,unsigned long long)
+ #endif
+ 
+ struct my_cookie
