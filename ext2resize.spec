@@ -9,7 +9,7 @@ Copyright:	GPL
 Source: 	http://www.dsv.nl/~buytenh/ext2resize/%{name}-%{version}.tar.bz2
 URL:		http://www.dsv.nl/~buytenh/ext2resize/
 Vendor:		Lennert Buytenhek <buytenh@dsv.nl>
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 an ext2 filesystem resizer
