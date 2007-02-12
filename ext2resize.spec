@@ -1,5 +1,5 @@
 Summary:	An ext2 filesystem resizer
-Summary(pl.UTF-8):   Narzędzie do zmiany wielkości systemu plików ext2
+Summary(pl.UTF-8):	Narzędzie do zmiany wielkości systemu plików ext2
 Name:		ext2resize
 Version:	1.1.19
 Release:	1
