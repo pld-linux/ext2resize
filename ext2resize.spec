@@ -1,5 +1,5 @@
 Summary:	An ext2 filesystem resizer
-Summary(pl):	Narzêdzie do zmiany wielko¶ci systemu plików ext2
+Summary(pl.UTF-8):   NarzÄ™dzie do zmiany wielkoÅ›ci systemu plikÃ³w ext2
 Name:		ext2resize
 Version:	1.1.19
 Release:	1
@@ -18,8 +18,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 An ext2 filesystem resizer.
 
-%description -l pl
-Narzêdzie do zmiany wielko¶ci systemu plików ext2.
+%description -l pl.UTF-8
+NarzÄ™dzie do zmiany wielkoÅ›ci systemu plikÃ³w ext2.
 
 %prep
 %setup -q
